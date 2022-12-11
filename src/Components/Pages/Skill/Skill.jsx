@@ -8,15 +8,15 @@ const Skill = () => {
             'name': 'HTML'
         },
         {
-            'value': 58,
+            'value': 85,
             'name': 'CSS'
         },
         {
-            'value': 75,
+            'value': 60,
             'name': 'Javascript'
         },
         {
-            'value': 75,
+            'value': 90,
             'name': 'ReactJs'
         },
         {
@@ -24,11 +24,11 @@ const Skill = () => {
             'name': 'NodeJs'
         },
         {
-            'value': 75,
+            'value': 80,
             'name': 'MongoDB'
         },
         {
-            'value': 75,
+            'value': 65,
             'name': 'ExpressJs'
         },
     ]

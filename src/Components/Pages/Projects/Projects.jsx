@@ -1,28 +1,19 @@
+import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import img1 from '../../../accest/image/Screenshot_1.png'
-import img2 from '../../../accest/image/Screenshot_2.png'
-import img3 from '../../../accest/image/Screenshot_3.png'
+import { Link } from 'react-router-dom';
+// import img1 from '../../../accest/image/Screenshot_1.png'
+// import img2 from '../../../accest/image/Screenshot_2.png'
+// import img3 from '../../../accest/image/Screenshot_3.png'
 
 const Projects = () => {
 
-    const MyProjects = [
-        {
-            "img": img1,
-            "name": "Swap",
-            "live_site_lik": "https://resal-jone.web.app/"
-        },
-        {
-            "img": img2,
-            "name": "Master Study",
-            "live_site_lik": "https://assaienment-11.web.app/"
-        },
-        {
-            "img": img3,
-            "name": "Code School",
-            "live_site_lik": "https://assaienment-10.web.app/"
-        },
-    ]
+    const { data: MyProjects = [] } = useQuery({
+        queryKey: ['bookings'],
+        queryFn: () => fetch('projects.json')
+            .then(res => res.json())
 
+    })
+    // console.log(MyProjects);
     return (
         <div id='projects' className='max-w-screen-xl mx-auto my-16'>
             <p className='text-lg font-bold text-center text-[#008374] poppies_fonts'>Showcasing some of my best work</p>
@@ -35,10 +26,12 @@ const Projects = () => {
                         <figure className='flex justify-center items-center '><img className='w-full h-48' src={projects.img} alt="" /></figure>
                         <div className="card-actions text-lg font-semibold justify-around mt-2 text-white w-full bg-[#008374]">
                             <div>
-                                <p>Swap</p>
+                                <p>{projects.name}</p>
                             </div>
                             <div>
-                                <a href={projects.live_site_lik} target="_blank" rel="noreferrer">Live Site Link</a>
+                                <Link to={`/projects/${projects.id}`}>
+                                    <p>Details</p>
+                                </Link>
                             </div>
                         </div>
                     </div>)
