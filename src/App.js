@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
 import './App.css';
 
+import { ThemContext } from './Components/Context/ThemProvider';
+import About from './Components/Pages/About/About';
+import Contact from './Components/Pages/Contact/Contact';
+import Footer from './Components/Pages/Footer/Footer';
+import Header from './Components/Pages/Header/Header';
+import Home from './Components/Pages/Home/Home';
+import Projects from './Components/Pages/Projects/Projects';
+import Skill from './Components/Pages/Skill/Skill';
+
 function App() {
+  const { theme } = useContext(ThemContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='max-w-screen-xl mx-auto' id={theme ? 'dark' : 'light'}>
+      <Header></Header>
+      <Home></Home>
+      <Projects></Projects>
+      <About></About>
+      <Skill></Skill>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 }
