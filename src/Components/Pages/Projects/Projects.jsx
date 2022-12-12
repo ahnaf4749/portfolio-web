@@ -1,9 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import img1 from '../../../accest/image/Screenshot_1.png'
-// import img2 from '../../../accest/image/Screenshot_2.png'
-// import img3 from '../../../accest/image/Screenshot_3.png'
 
 const Projects = () => {
 
@@ -13,7 +10,6 @@ const Projects = () => {
             .then(res => res.json())
 
     })
-    // console.log(MyProjects);
     return (
         <div id='projects' className='max-w-screen-xl mx-auto my-16'>
             <p className='text-lg font-bold text-center text-[#008374] poppies_fonts'>Showcasing some of my best work</p>

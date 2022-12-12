@@ -3,8 +3,7 @@ import React from 'react';
 const About = () => {
     return (
         <div id='about' className='my-16'>
-            <h2 className='text-lg font-bold text-center text-[#FF0080] poppies_fonts'>Who Am I?</h2>
-            <h2 className='jost_fonts mb-16 text-[#D0D1D1] text-center text-6xl'>About Me</h2>
+            <h2 className='jost_fonts my-5 text-[#008374] text-center text-5xl font-bold underline'>About Me</h2>
             <div className='max-w-screen-xl mx-5 mb-12'>
                 <div className="hero">
                     <div className="hero-content flex-col p-0 lg:py-16 lg:flex-row-reverse">

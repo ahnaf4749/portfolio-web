@@ -35,7 +35,7 @@ const Skill = () => {
 
     return (
         <div>
-            <p>Skill</p>
+            <p className='text-4xl text-center font-bold my-5 underline  text-[#008374]'>Skill</p>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4'>
                 {
                     name.map(n => (
