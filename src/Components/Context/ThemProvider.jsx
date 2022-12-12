@@ -7,7 +7,7 @@ const ThemProvider = ({ children }) => {
 
     useEffect(() => {
         const rootElement = window.document.documentElement
-        console.log(rootElement);
+        // console.log(rootElement);
         if (theme) {
             rootElement.classList.add('dark');
             rootElement.classList.remove('light')

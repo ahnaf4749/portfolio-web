@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 const Projects = () => {
 
     const { data: MyProjects = [] } = useQuery({
-        queryKey: ['bookings'],
-        queryFn: () => fetch('projects.json')
+        queryKey: ['projects'],
+        queryFn: () => fetch('https://protfoilo-web-servar.vercel.app/projects')
             .then(res => res.json())
 
     })

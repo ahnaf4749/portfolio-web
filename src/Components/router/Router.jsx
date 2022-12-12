@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import About from "../Pages/About/About";
+import Blog from "../Pages/Blog/Blog";
 import Contact from "../Pages/Contact/Contact";
 import Homes from "../Pages/Homes/Homes";
 import Projects from "../Pages/Projects/Projects";
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'blog',
-                // element:
+                element: <Blog></Blog>
             },
             {
                 path: '/contact',
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
             {
                 path: '/projects/:id',
                 element: <ProjectsDetails></ProjectsDetails>,
-                loader: ({ params }) => fetch(`projects.json/projects/${params.id}`)
+                loader: ({ params }) => fetch(`https://protfoilo-web-servar.vercel.app/projects/${params.id}`)
             }
         ]
     }
