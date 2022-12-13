@@ -14,16 +14,10 @@ const ProjectsDetails = () => {
                         details.map(d => <li className='my-2 font-semibold'>{d}</li>)
                     }
                 </div>
-                <div className='w-1/2'>
-                    <div className=''>
-                        <a href={live_site_link} target="_blank" rel="noopener noreferrer">Live link</a>
-                    </div>
-                    <div>
-                        <a href={client_site_link} target="_blank" rel="noopener noreferrer">client code link</a>
-                    </div>
-                    <div>
-                        <a href={server_site_link} target="_blank" rel="noopener noreferrer">server code link</a>
-                    </div>
+                <div className='flex justify-center items-center mt-10'>
+                    <a className='btn btn-outline btn-info mr-10' href={live_site_link}>Live Site Link</a>
+                    <a className='btn btn-outline btn-info mr-10' href={client_site_link}>Client Code Link</a>
+                    <a className='btn btn-outline btn-info' href={server_site_link}>Server Code Link</a>
                 </div>
             </div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 my-10'>
